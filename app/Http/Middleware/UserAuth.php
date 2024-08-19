@@ -15,6 +15,9 @@ class UserAuth
      */
     public function handle(Request $request, Closure $next): Response
     {
+
+       
+
         if($request->path()=="Login" && $request->session()->has('user')){
             return redirect('/product');
         }
